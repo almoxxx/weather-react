@@ -48,6 +48,24 @@ export default function App() {
           icon={icon}
         />
       </div>
+      <p>
+        This App is{" "}
+        <a
+          href="https://github.com/almoxxx/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-sourced
+        </a>{" "}
+        and was coded by{" "}
+        <a
+          href="https://alena-mohsenyar.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Alena Mohsenyar.
+        </a>{" "}
+      </p>
     </div>
   );
 }
