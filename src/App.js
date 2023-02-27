@@ -4,7 +4,7 @@ import Weather from "./Weather";
 import axios from "axios";
 
 export default function App() {
-  let [city, setCity] = useState("");
+  let [city, setCity] = useState(null);
   let [temperature, setTemperature] = useState(null);
   let [description, setDescription] = useState(null);
   let [humidity, setHumidity] = useState(null);
@@ -24,15 +24,15 @@ export default function App() {
   function updateCity(event) {
     setCity(event.target.value);
   }
-
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=200cec8928a5e89f5e5c86277bac3ce1&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}
+      &appid=200cec8928a5e89f5e5c86277bac3ce1&units=metric`;
     axios.get(url).then(showWeather);
   }
 
   return (
-    <div className="App">
+    <div className="App container">
       <h1>Weather Search Engine</h1>
       <form onSubmit={handleSubmit}>
         <input type="search" placeholder="Type a city" onChange={updateCity} />
