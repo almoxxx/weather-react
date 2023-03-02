@@ -11,14 +11,16 @@ export default function App() {
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState(null);
   let [resultCity, setResultCity] = useState(null);
+  let [time, setTime] = useState(null);
 
   function showWeather(response) {
-    setTemperature(response.data.main.temp);
-    setDescription(response.data.weather[0].description);
-    setHumidity(response.data.main.humidity);
+    setTemperature(response.data.temperature.current);
+    setDescription(response.data.condition.description);
+    setHumidity(response.data.temperature.humidity);
     setWind(response.data.wind.speed);
-    setIcon(response.data.weather[0].icon);
-    setResultCity(response.data.name);
+    setIcon(response.data.condition.icon);
+    setResultCity(response.data.city);
+    setTime(new Date(response.data.time * 1000));
   }
 
   function updateCity(event) {
@@ -26,8 +28,7 @@ export default function App() {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}
-      &appid=200cec8928a5e89f5e5c86277bac3ce1&units=metric`;
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=b1d355353afe3oe89t1c624ba0cd84bf&units=metric`;
     axios.get(url).then(showWeather);
   }
 
@@ -52,6 +53,7 @@ export default function App() {
           humidity={humidity}
           wind={wind}
           icon={icon}
+          time={time}
         />
       </div>
       <footer>
