@@ -1,0 +1,25 @@
+:root {
+  --primary-font: Space Grotesk;
+}
+
+.Weather {
+  border: 3px solid yellow;
+  font-family: var(--primary-font);
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.Weather p {
+  line-height: 4px;
+}
+.Weather ul {
+  list-style: none;
+}
+.Weather .row {
+  margin-top: 20px;
+}
+
+footer {
+  font-size: 10px;
+}

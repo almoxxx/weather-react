@@ -35,10 +35,16 @@ export default function App() {
     <div className="App container">
       <h1>Weather Search Engine</h1>
       <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Type a city" onChange={updateCity} />
-        <input type="submit" value="Search" />
+        <input
+          type="search"
+          placeholder="Type a city"
+          className="form-control text-white bg-black bg-opacity-50"
+          onChange={updateCity}
+        />
+        <input type="submit" className="button" value="Search" />
       </form>
       <div>
+        <h2>Can I join the sunny side?</h2>
         <Weather
           city={resultCity}
           temperature={temperature}
@@ -48,7 +54,7 @@ export default function App() {
           icon={icon}
         />
       </div>
-      <p>
+      <footer>
         This App is{" "}
         <a
           href="https://github.com/almoxxx/weather-react"
@@ -65,7 +71,7 @@ export default function App() {
         >
           Alena Mohsenyar.
         </a>{" "}
-      </p>
+      </footer>
     </div>
   );
 }
