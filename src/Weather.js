@@ -8,7 +8,7 @@ export default function Weather(props) {
       <div className="Weather">
         <h2>Dude, this is your weather:</h2>
         <h1>{props.city}</h1>
-        <FormattedDate time={props.time.getDay()} />
+        <FormattedDate time={props.time} />
         <p>
           The Weather Description in {props.city} is{" "}
           <strong>{props.description}</strong>.
