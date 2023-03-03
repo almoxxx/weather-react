@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherUnit from "./WeatherUnit";
 
 export default function Weather(props) {
   if (props.temperature) {
@@ -15,11 +16,8 @@ export default function Weather(props) {
         </p>
         <div className="row">
           <div className="col-6">
-            {" "}
-            The Temperature is{" "}
             <strong>
-              {Math.round(props.temperature)}
-              °C
+              <WeatherUnit celsius={props.temperature} />
             </strong>
             .{" "}
             <img
