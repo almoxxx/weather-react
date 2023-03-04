@@ -1,0 +1,7 @@
+.Forecast {
+  text-align: center;
+  color: white;
+}
+.forecast-minimum {
+  opacity: 0.6;
+}

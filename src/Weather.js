@@ -2,6 +2,7 @@ import React from "react";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 import WeatherUnit from "./WeatherUnit";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   if (props.temperature) {
@@ -32,6 +33,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
+        <Forecast />
       </div>
     );
   } else {
