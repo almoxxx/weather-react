@@ -8,7 +8,7 @@ export default function Forecast(props) {
   let [forecastdata, setForecastdata] = useState(null);
 
   function handleResponse(response) {
-    setForecastdata(response.data);
+    setForecastdata(response.data.daily);
     setLoaded(true);
   }
 
