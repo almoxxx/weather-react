@@ -33,7 +33,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
-        <Forecast />
+        <Forecast city={props.city} />
       </div>
     );
   } else {
