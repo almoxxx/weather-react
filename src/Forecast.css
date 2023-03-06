@@ -5,3 +5,13 @@
 .forecast-minimum {
   opacity: 0.6;
 }
+
+.forecastDay img {
+  width: 6%;
+  padding: 2px;
+  margin: 2px;
+}
+
+.forecastDay {
+  line-height: 3px;
+}
