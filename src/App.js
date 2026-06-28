@@ -71,7 +71,7 @@ export default function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Alena Mohsenyar.
+          Alena.
         </a>{" "}
       </footer>
     </div>
